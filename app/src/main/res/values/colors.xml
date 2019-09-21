@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+   /----colores propios---/
+    <color name="blanco">#ffffff</color>
+    <color name="background">#34173F</color>
+    <color name="celeste">#227CEB</color>
+    <color name="verdeClaro">#22E164</color>
+</resources>
