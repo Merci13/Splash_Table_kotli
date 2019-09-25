@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">Splash_Table_Kotli</string>
+    <string name="button1">Botón_1</string>
+    <string name="text1">Hola Josue</string>
+    <string name="text2">Escribe Algo</string>
+    <string name="welcome">Bienvenidos</string>
+    <string name="descripciondelicono">Icono del programa</string>
+    <string name="titulo">La aplicacion esta orientada a a dos opciones,
+        la opcion del boton verde es para reservar un boleto de avion.
+        la opcion del boton celeste es para
+        ordenar una pizza</string>
+    //Strings comunes
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="telf">Número Telefónico</string>
+
+
+    //Strings de la pizza
+    <string name="tituloPizza">Por favor rellene  con su información los campos solicitados </string>
+    <string name="pizza">Pizza</string>
+    <string name="tamannoPizza">Tamaño de la pizza</string>
+    <string name="costo">Costo de la pizza</string>
+    <string name="direecion">Direccion</string>
+    <string name="tamannoGrande">Grande</string>
+    <string name="tamannoMediano">Mediano</string>
+    <string name="tamannoPequenno">Pequeño</string>
+
+    //Strings del Avion
+    <string name="avion">Avion</string>
 </resources>
