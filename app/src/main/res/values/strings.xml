@@ -25,6 +25,9 @@
     <string name="tamannoMediano">Mediano</string>
     <string name="tamannoPequenno">Pequeño</string>
 
+
     //Strings del Avion
     <string name="avion">Avion</string>
+    <string name="una_persona">Una Persona</string>
+    <string name="dos_personas">Dos Personas</string>
 </resources>
