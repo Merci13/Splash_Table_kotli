@@ -7,11 +7,11 @@
     tools:context=".AvionActivity">
 
     <Button
+        android:id="@+id/boton_guardar_avion"
         android:layout_width="205dp"
         android:layout_height="62dp"
         android:layout_marginBottom="44dp"
         android:background="@color/colorPrimary"
-        android:onClick="ticketeData"
 
 
         android:text="Guardar"
