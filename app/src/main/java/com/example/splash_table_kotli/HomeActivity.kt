@@ -42,12 +42,12 @@ class HomeActivity : AppCompatActivity() {
         avionButton.setOnClickListener{
             val intent = Intent(this@HomeActivity, AvionActivity::class.java)
 
-            startActivityForResult(intent,PIZZA_REQUEST_CODE)
+            startActivityForResult(intent,AVION_REQUEST_CODE)
             }
         pizzaButton.setOnClickListener{
            val intent = Intent(this@HomeActivity,PizzaTable::class.java)
 
-            startActivityForResult(intent, AVION_REQUEST_CODE)
+            startActivityForResult(intent,PIZZA_REQUEST_CODE )
         }
 
 
@@ -66,11 +66,11 @@ class HomeActivity : AppCompatActivity() {
         if (requestCode == AVION_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null){
 
 
-            data?.getParcelableExtra<Ticketes>("tickete")?.let{tikete ->
-                tiquete_de_avion.add(tikete)
+            data?.getParcelableExtra<Ticketes>("Tickete")?.let{tiketes ->
+                tiquete_de_avion.add(tiketes)
             }
             //muestra en consola lo que tiene tiquete de avion
-            Log.d("TIQUETES", tiquete_de_avion.toString())
+            Log.d("TIQUETES---------->", tiquete_de_avion.toString())
 
 
         }else if (requestCode == PIZZA_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null){
@@ -78,7 +78,7 @@ class HomeActivity : AppCompatActivity() {
                 ordenes_pizza.add(it)
 
             }
-            Log.d("ORDENES",ordenes_pizza.toString())
+            Log.d("ORDENES--------->",ordenes_pizza.toString())
 
         }
 
