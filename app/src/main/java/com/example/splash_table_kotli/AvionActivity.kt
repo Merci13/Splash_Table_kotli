@@ -6,6 +6,8 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.inputmethod.InputMethodManager
 
@@ -75,5 +77,18 @@ class AvionActivity : AppCompatActivity() {
 
     }
 
+    //Text watcher para los EditText
+   val textWatcher = object : TextWatcher {
+        override fun afterTextChanged(p0: Editable?) {
 
-}
+        }
+
+        override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+        }
+
+        override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        }
+    }
+}//fin de la clase
