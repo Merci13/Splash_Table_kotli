@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -18,9 +19,18 @@ import android.widget.*
 
 class AvionActivity : AppCompatActivity() {
 
+    var myTimer = MyTimer()
+
+    companion object {
+        private const val TIMER:Int = 15 //constante para el timer
+        var mainHandler:Handler = Handler()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_avion)
+        myTimer.conteo = 0
+        myTimer.start()
 
 
         //recoger las edtit text en variables
@@ -29,6 +39,10 @@ class AvionActivity : AppCompatActivity() {
         val apellido = findViewById<EditText>(R.id.apellido_tickete)
         var cantidadPersonas = findViewById<RadioGroup>(R.id.radioGroup2).checkedRadioButtonId
         var numeroCedula = findViewById<EditText>(R.id.numeroDeCedula)
+
+        nombre.addTextChangedListener(textWatcher)
+        apellido.addTextChangedListener(textWatcher)
+        numeroCedula.addTextChangedListener(textWatcher)
 
         //da problemas a la hora de recoger el dato, setea por default el NULL en vez de el valor que
         //fue puesto por el usuario
@@ -79,16 +93,55 @@ class AvionActivity : AppCompatActivity() {
 
     //Text watcher para los EditText
    val textWatcher = object : TextWatcher {
-        override fun afterTextChanged(p0: Editable?) {
-
-        }
-
         override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
+            //reiniciar el timer
         }
+
 
         override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
+            //cuando no esta escribiendo hacer correr el timer
+            myTimer.conteo = 0
+
+
+        }
+
+        override fun afterTextChanged(p0: Editable?) {
+
+
         }
     }
+
+
+    //funcion del timer
+    inner class MyTimer : Thread() {
+        var conteo = 0
+        override fun run() {
+
+
+            while (conteo <=TIMER){
+                if (conteo < TIMER){
+                    Thread.sleep(1000)//espera un segundo
+                    Log.d("Timer----------------->", "$conteo")
+
+
+                }else{
+                    mainHandler.post {
+                        Log.d("Timer-------Cerrando->", "$conteo")
+                        finish()//cierra el activity
+
+                    }
+
+
+                }
+
+                conteo++
+
+        }
+
+
+        }
+
+    }
+
 }//fin de la clase
