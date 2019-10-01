@@ -74,8 +74,8 @@ class HomeActivity : AppCompatActivity() {
 
 
         }else if (requestCode == PIZZA_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null){
-            data?.getParcelableExtra<OrdenPizza>("orden")?.let{
-                ordenes_pizza.add(it)
+            data?.getParcelableExtra<OrdenPizza>("Orden")?.let{ pedido ->
+                ordenes_pizza.add(pedido)
 
             }
             Log.d("ORDENES--------->",ordenes_pizza.toString())
