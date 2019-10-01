@@ -27,7 +27,7 @@ class PizzaTable : AppCompatActivity() {
         //---se validan que los datos no sean nulos o incorrectos
         var botonGuardar = findViewById<Button>(R.id.btn_OK_Pizza)
         botonGuardar.setOnClickListener{
-            
+
             var tamannoPizza = findViewById<RadioGroup>(R.id.radioGroup).checkedRadioButtonId
 
             if (name.text.toString() == "" || apellido.text.toString() == ""  ){
