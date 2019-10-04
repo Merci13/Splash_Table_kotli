@@ -44,8 +44,6 @@ class AvionActivity : AppCompatActivity() {
         apellido.addTextChangedListener(textWatcher)
         numeroCedula.addTextChangedListener(textWatcher)
 
-        //da problemas a la hora de recoger el dato, setea por default el NULL en vez de el valor que
-        //fue puesto por el usuario
 
 
 
